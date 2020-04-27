@@ -11,7 +11,7 @@ public class RandNumUtilTest {
 	@Test
 	public void testGetValue() {
 		for (int i = 0; i < 100; i++) {
-			double value = RandNumUtil.getValue(30000, 50000, 2);
+			double value = RandNumUtil.getValue(10000, 30000, 2);
 			System.out.println(value);
 		}
 		
@@ -19,9 +19,11 @@ public class RandNumUtilTest {
 
 	@Test
 	public void testRandom() {
+		for (int i = 0; i < 50; i++) {
+			int j = RandNumUtil.random(1, 5);
+			System.out.println(j);
+		}
 		
-		int i = RandNumUtil.random(1, 3);
-		System.out.println(i);
 	}
 
 }
